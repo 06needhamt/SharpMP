@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SharpMP
 {
-    public class Class1
+    public static class OpenMP
     {
     }
 }

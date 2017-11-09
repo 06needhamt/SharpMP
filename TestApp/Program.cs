@@ -11,17 +11,8 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            Test();
+            // Test();
             Console.ReadKey();
-        }
-
-        [DllImport("SharpMP-Natives.dll")]
-        private static extern int dllFunc();
-
-
-        private static void Test()
-        {
-            dllFunc();
         }
     }
 }
