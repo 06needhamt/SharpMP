@@ -1,4 +1,4 @@
-#include "omp.h"
+#include <omp.h>
 #include "OpenMP.h"
 #include "ScheduleKind.h"
 #include "Lock.h"
@@ -211,5 +211,41 @@ extern "C" {
 		default:
 			break;
 		}
+	}
+
+	_declspec(dllexport) double GetWTime() {
+		return omp_get_wtime();
+	}
+
+	_declspec(dllexport) double GetWTick() {
+		return omp_get_wtick();
+	}
+
+	_declspec(dllexport) int GetDefaultDevice() {
+		return omp_get_default_device();
+	}
+
+	_declspec(dllexport) void SetDefaultDevice(int device) {
+		omp_set_default_device(device);
+	}
+
+	_declspec(dllexport) int IsInitialDevice() {
+		return omp_is_initial_device();
+	}
+
+	_declspec(dllexport) int GetNumDevices() {
+		return 1; /* omp_get_num_devices();*/ //TODO Support This
+	}
+
+	_declspec(dllexport) int GetNumTeams() {
+		return omp_get_num_teams();
+	}
+
+	_declspec(dllexport) int GetTeamNum() {
+		return omp_get_team_num();
+	}
+
+	_declspec(dllexport) int GetCancellation() {
+		return omp_get_cancellation();
 	}
 }

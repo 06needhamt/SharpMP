@@ -1,6 +1,9 @@
 #pragma once
-#include "omp.h"
+#include <omp.h>
 #include "ScheduleKind.h"
+#include "Lock.h"
+#include "NestLock.h"
+#include "LockHint.h"
 
 static_assert(sizeof(int) == 4, "This Library must be compiled in 64-Bit mode");
 static_assert(sizeof(void*) == 8, "This Library must be compiled in 64-Bit mode");
@@ -27,4 +30,25 @@ extern "C" {
 		_declspec(dllexport) int GetMaxActiveLevels();
 		_declspec(dllexport) void GetSchedule(void* kind, int* chunkSize);
 		_declspec(dllexport) int GetMaxTaskPriority();
+		_declspec(dllexport) void InitLock(Lock* lock);
+		_declspec(dllexport) void SetLock(Lock* lock);
+		_declspec(dllexport) void UnsetLock(Lock* lock);
+		_declspec(dllexport) void DestroyLock(Lock* lock);
+		_declspec(dllexport) int TestLock(Lock* lock);
+		_declspec(dllexport) void InitNestLock(NestLock* lock);
+		_declspec(dllexport) void SetNestLock(NestLock* lock);
+		_declspec(dllexport) void UnsetNestLock(NestLock* lock);
+		_declspec(dllexport) void DestroyNestLock(NestLock* lock);
+		_declspec(dllexport) int TestNestLock(NestLock* lock);
+		_declspec(dllexport) void InitNestLockWithHint(NestLock* lock, LockHint hint);
+		_declspec(dllexport) void InitLockWithHint(Lock* lock, LockHint hint);
+		_declspec(dllexport) double GetWTime();
+		_declspec(dllexport) double GetWTick();
+		_declspec(dllexport) int GetDefaultDevice();
+		_declspec(dllexport) void SetDefaultDevice(int device);
+		_declspec(dllexport) int IsInitialDevice();
+		_declspec(dllexport) int GetNumDevices();
+		_declspec(dllexport) int GetNumTeams();
+		_declspec(dllexport) int GetTeamNum();
+		_declspec(dllexport) int GetCancellation();
 }
