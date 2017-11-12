@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>SharpMP</id>
+        <version>1.0.0</version>
+        <title>SharpMP C# Bindings for OpenMP 4.0</title>
+        <authors>Thomas Needham</authors>
+        <owners>Thomas Needham</owners>
+        <licenseUrl>https://github.com/06needhamt/SharpMP/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/06needhamt/SharpMP</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>SharpMP C# Bindings for OpenMP 4.0</description>
+        <summary>SharpMP C# Bindings for OpenMP 4.0</summary>
+        <releaseNotes>1.0.0 First Release</releaseNotes>
+        <copyright>Copyright 2017 Thomas Needham</copyright>
+        <language>en-GB</language>
+        <tags>OpenMP Bindings</tags>
+        <dependencies>
+            <dependency id="SampleDependency" version="1.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="SharpMP\bin\x64\Debug\SharpMP-Natives.dll" target="lib\SharpMP-Natives.dll" />
+        <file src="SharpMP\bin\x64\Debug\SharpMP-Natives.ilk" target="lib\SharpMP-Natives.ilk" />
+        <file src="SharpMP\bin\x64\Debug\SharpMP-Natives.pdb" target="lib\SharpMP-Natives.pdb" />
+        <file src="SharpMP\bin\Debug\SharpMP.dll" target="lib\SharpMP.dll" />
+        <file src="SharpMP\bin\Debug\SharpMP.pdb" target="lib\SharpMP.pdb" />
+        <file src="SharpMP\Properties\AssemblyInfo.cs" target="SharpMP\Properties\AssemblyInfo.cs" />
+        <file src="SharpMP\Lock.cs" target="SharpMP\Lock.cs" />
+        <file src="SharpMP\LockHint.cs" target="SharpMP\LockHint.cs" />
+        <file src="SharpMP\NestLock.cs" target="SharpMP\NestLock.cs" />
+        <file src="SharpMP\OpenMP.cs" target="SharpMP\OpenMP.cs" />
+        <file src="SharpMP\ScheduleKind.cs" target="SharpMP\ScheduleKind.cs" />
+        <file src="SharpMP\SharpMP.csproj" target="SharpMP\SharpMP.csproj" />
+        <file src="SharpMP-Natives\Lock.h" target="SharpMP-Natives\Lock.h" />
+        <file src="SharpMP-Natives\LockHint.h" target="SharpMP-Natives\LockHint.h" />
+        <file src="SharpMP-Natives\NestLock.h" target="SharpMP-Natives\NestLock.h" />
+        <file src="SharpMP-Natives\OpenMP.cpp" target="SharpMP-Natives\OpenMP.cpp" />
+        <file src="SharpMP-Natives\OpenMP.h" target="SharpMP-Natives\OpenMP.h" />
+        <file src="SharpMP-Natives\ScheduleKind.h" target="SharpMP-Natives\ScheduleKind.h" />
+        <file src="SharpMP-Natives\SharpMP-Natives.vcxproj" target="SharpMP-Natives\SharpMP-Natives.vcxproj" />
+        <file src="SharpMP-Natives\SharpMP-Natives.vcxproj.filters" target="SharpMP-Natives\SharpMP-Natives.vcxproj.filters" />
+        <file src="SharpMP-Natives\SharpMP-Natives.vcxproj.user" target="SharpMP-Natives\SharpMP-Natives.vcxproj.user" />
+        <file src="SharpMP.sln" target="SharpMP.sln" />
+    </files>
+</package>
