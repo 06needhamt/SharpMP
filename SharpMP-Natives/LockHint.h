@@ -10,4 +10,4 @@ enum LockHint {
 	K_HLE = (1 << 16),
 	K_RTM = (1 << 17),
 	K_Adaptive = (1 << 18)
-} t;
+};
