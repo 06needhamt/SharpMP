@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>SharpMP</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>SharpMP C# Bindings for OpenMP 4.0</title>
         <authors>Thomas Needham</authors>
         <owners>Thomas Needham</owners>
@@ -11,13 +11,11 @@
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <description>SharpMP C# Bindings for OpenMP 4.0</description>
         <summary>SharpMP C# Bindings for OpenMP 4.0</summary>
-        <releaseNotes>1.0.0 First Release</releaseNotes>
+        <releaseNotes>1.0.1 Removed Incorrect Dependancy
+1.0.0 First Release</releaseNotes>
         <copyright>Copyright 2017 Thomas Needham</copyright>
         <language>en-GB</language>
         <tags>OpenMP Bindings</tags>
-        <dependencies>
-            <dependency id="SampleDependency" version="1.0" />
-        </dependencies>
     </metadata>
     <files>
         <file src="SharpMP\bin\x64\Debug\SharpMP-Natives.dll" target="lib\SharpMP-Natives.dll" />
